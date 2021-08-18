@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ScoopDiving</title>
+    <link rel="stylesheet" href="ScoopDiving.css" />
+    <link rel="stylesheet" href="ScoopDiving-Resp.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    />
+    <!-- social media icons  -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- to make it responisuive in mobile phone, I must add the below -->
+
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+  </head>
+  <body>
+    <!-- this one is for the arrow that help us to get back to the top first page/header 
+    back to top(btt). for the javascript-->
+    <div class="btt" id="btt">
+      <i class="fa fa-arrow-up" aria-hidden="true"> </i>
+    </div>
+
+    <!-- navigation for the mobile phones -->
+    <!-- by given  class mob, it will be hidden on desktop and only visible on mobile screen -->
+    <div class="mob-nav mob" id="mob-nav">
+      <ul>
+        <li>HOME</li>
+        <li>PAGES</li>
+        <li>BLOG</li>
+        <li>GALLERY</li>
+        <li>ELEMENTS</li>
+        <li>CONTACTS</li>
+      </ul>
+    </div>
+
+    <!-- for the 3 dots to the call us info, for the javascript -->
+
+    <div class="mob-child mob" id="mob-child">
+      <p style="margin-bottom: 5px">
+        <span class="callus" style="color: #0473ab">Call Us :</span> +1 (800)
+        123 4569
+      </p>
+      <p>info@demolink.org</p>
+    </div>
+
+    <!-- banner -->
+    <section class="banner">
+      <!-- prev button -->
+      <div class="prev-button">
+        <span>prev</span>
+        <span class="btn-line"></span>
+      </div>
+
+      <div class="banner-content">
+        <!-- header -->
+        <div class="header">
+          <div class="header-child">
+            <p style="margin-bottom: 5px">
+              <span style="font-weight: bold">Call Us :</span> +1 (800) 123 4569
+            </p>
+            <p>info@demolink.org</p>
+          </div>
+
+          <div class="header-child">
+            <!-- for the 3 humberguer menue before to logo on the mobile screen size -->
+            <!-- I give id to work on the responsivness with Javascript -->
+            <p class="mob menu-lines" id="menu-lines">
+              <span class="head-line" id="line1"></span>
+              <span class="head-line" id="line2"></span>
+              <span class="head-line" id="line3"></span>
+            </p>
+
+            <img src="./Image_scoopdiving/diviers_logo.png" class="desktop" />
+            <img src="./Image_scoopdiving/mobile-logo.png" class="mob logo" />
+          </div>
+
+          <div class="header-child">
+            <i class="fa fa-search"></i>
+            <span class="en">en</span>
+            <!-- for the 3 dots next to en on the mobile screen size -->
+            <p class="mob menu-dots" id="menu-dots">
+              <span class="head-dot"></span>
+              <span class="head-dot"></span>
+              <span class="head-dot"></span>
+            </p>
+          </div>
+        </div>
+        <!-- naviagtion -->
+
+        <!-- I will give nav-parent, nav class that will work with the javascript. and I add the 2 id for the javascript purpose (nav-parent, nav)  -->
+
+        <div class="nav-parent" id="nav-parent">
+          <div class="nav" id="nav">
+            <ul>
+              <li id="nav1">HOME</li>
+              <li>PAGES</li>
+              <li>BLOG</li>
+              <li>GALLERY</li>
+              <li>ELEMENTS</li>
+              <li>CONTACTS</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="banner-text">
+          <h1>
+            Best Equipments <br class="desktop" />
+            and <br class="mob" />
+            Instructors
+          </h1>
+
+          <p>
+            Our team and the top-notch equipment <br />
+            guarantee unforgettable diving.
+          </p>
+
+          <p>
+            <button class="btn">READ MORE</button>
+          </p>
+        </div>
+      </div>
+
+      <!-- next button -->
+      <div class="next-button slider-btn">
+        <span>next</span>
+        <span class="btn-line"></span>
+      </div>
+    </section>
+
+    <!-- destination -->
+
+    <section class="destination">
+      <p class="title">Destinations</p>
+
+      <div class="container destination-container">
+        <div class="dest-card">
+          <div class="dest-extra"></div>
+          <div class="dest-img">
+            <img src="./image_scoopdiving/dest-1.jpg" />
+          </div>
+
+          <p class="dest-title">Maldives</p>
+          <p class="dest-description">True abundance of marine life</p>
+          <p class="dest-btn-parent">
+            <button class="dest-btn">BOOK NOW</button>
+          </p>
+        </div>
+
+        <div class="dest-card">
+          <div class="dest-extra"></div>
+          <div class="dest-img">
+            <img src="./Image_scoopdiving/dest-2.jpg" />
+          </div>
+
+          <p class="dest-title">Indonesia</p>
+          <p class="dest-description">Unique marine diversity</p>
+          <p class="dest-btn-parent">
+            <button class="dest-btn">BOOK NOW</button>
+          </p>
+        </div>
+
+        <div class="dest-card">
+          <div class="dest-extra"></div>
+          <div class="dest-img">
+            <img src="./Image_scoopdiving/dest-3.jpg" />
+          </div>
+
+          <p class="dest-title">Australia</p>
+          <p class="dest-description">The world's top scuba destination</p>
+          <p class="dest-btn-parent">
+            <button class="dest-btn">BOOK NOW</button>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Equipment section -->
+    <section class="equipments">
+      <div class="equipment1">
+        <!-- 1st right -->
+        <div class="eq brd">
+          <div class="eq-child">
+            <div class="eq-detail right">
+              <p class="eq-title">Best Equimnet</p>
+              <p class="eq-desc">
+                Our agency provides first-class equipment for all our
+                clients,regardless of their level.
+              </p>
+            </div>
+            <div class="eq-img img2">
+              <!-- <div class="eq-img"> -->
+              <img src="./Image_scoopdiving/eq-1.png" />
+            </div>
+          </div>
+        </div>
+        <!-- 2nd right -->
+        <div class="eq">
+          <div class="eq-child">
+            <div class="eq-detail right">
+              <p class="eq-title">Exciting Places</p>
+              <p class="eq-desc">
+                We offer a variety of destinationsincluding the most exotic ones
+                located all over the world.
+              </p>
+            </div>
+            <div class="eq-img img2">
+              <!-- <div class="eq-img"> -->
+              <img src="./Image_scoopdiving/eq-2.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="equipment1">
+        <!-- 3rd child left -->
+        <div class="eq brd">
+          <div class="eq-child">
+            <div class="eq-img img1">
+              <img src="./Image_scoopdiving/eq-3.png" />
+            </div>
+            <div class="eq-detail left">
+              <p class="eq-title">100% Saftey</p>
+              <p class="eq-desc">
+                We pay a lot of attention to diver's saftey at all times,as
+                there's always some risk involved in it.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- 4th child left -->
+        <div class="eq">
+          <div class="eq-child">
+            <div class="eq-img img1">
+              <img src="./Image_scoopdiving/eq-4.png" />
+            </div>
+            <div class="eq-detail left">
+              <p class="eq-title">Instructors</p>
+              <p class="eq-desc">
+                We are a team of talented and experinced diving instructors
+                always ready to help you.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--counter section  -->
+
+    <section class="counter">
+      <div class="container counter-container">
+        <div class="counter-child">
+          <p class="counter-number">245</p>
+          <p class="counter-line"></p>
+          <p class="counter-text">Monthly<br class="desktop" />clients</p>
+        </div>
+
+        <div class="counter-child">
+          <p class="counter-number">182</p>
+          <p class="counter-line"></p>
+          <p class="counter-text">Special<br class="desktop" />offers</p>
+        </div>
+
+        <div class="counter-child">
+          <p class="counter-number">1267</p>
+          <p class="counter-line"></p>
+          <p class="counter-text">Postive<br class="desktop" />reviews</p>
+        </div>
+
+        <div class="counter-child">
+          <p class="counter-number">47</p>
+          <p class="counter-line"></p>
+          <p class="counter-text">
+            Partners throughout<br class="desktop" />the USA
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why choose Section -->
+    <section class="why">
+      <div class="container why-container">
+        <div class="why-row-1">
+          <div class="why-banner">
+            <div class="why-indicators">
+              <p></p>
+              <p></p>
+              <p></p>
+            </div>
+          </div>
+
+          <div class="why-detail">
+            <p class="title">Why Choose Divers</p>
+
+            <div class="information">
+              <div class="info-ele brd">
+                <div class="circle-btn">
+                  <i class="fa fa-angle-right"></i>
+                </div>
+                <p class="info-text">20+ Years of Experience in Diving</p>
+              </div>
+
+              <div class="info-ele brd">
+                <div class="circle-btn">
+                  <i class="fa fa-angle-right"></i>
+                </div>
+                <p class="info-text">Carefully Chosen Team of Instructors</p>
+              </div>
+
+              <div class="info-ele brd">
+                <div class="circle-btn">
+                  <i class="fa fa-angle-right"></i>
+                </div>
+                <p class="info-text">Affordable Prices</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="why-row-2">
+          <div class="why-reason">
+            <div><img src="./Image_scoopdiving/why-reason1.png" /></div>
+            <div class="reason-detail">
+              <p class="reason-title">Different Locations</p>
+              <p class="reason-desc">a wide variety of destinations</p>
+            </div>
+          </div>
+
+          <div class="why-reason">
+            <div><img src="./Image_scoopdiving/why-reason2.png" /></div>
+            <div class="reason-detail">
+              <p class="reason-title">Free Transfer</p>
+              <p class="reason-desc">we offer free transfer to Drivers</p>
+            </div>
+          </div>
+
+          <div class="why-reason">
+            <div><img src="./Image_scoopdiving/why-reason3.png" /></div>
+            <div class="reason-detail">
+              <p class="reason-title">Online Payments</p>
+              <p class="reason-desc">Pay for any diving tour online</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials  section -->
+
+    <section class="testimonial">
+      <h1 class="title">Testimonials</h1>
+
+      <div class="container testimonial-container">
+        <div class="testimonial-slider">
+          <div class="slider">
+            <div class="slider-text">
+              <p>
+                A:Water is the expression of the unconscious, its own truth,
+                place of the secret and unknown motivations
+              </p>
+              <!-- this formate willonly apply to mobile, but for the desktop, it will follow the animaiton of the below Testimonial users -->
+              <div class="user mob">
+                <div class="user-img">
+                  <img src="./Image_scoopdiving/Testmonial-1.jpg" />
+                </div>
+                <p class="user-title">PATRIC GOODMAN</p>
+                <p class="user-type">Client</p>
+              </div>
+            </div>
+
+            <div class="slider-text">
+              <p>B:Many divers give in to this sort of pressure</p>
+
+              <div class="user mob">
+                <div class="user-img">
+                  <img src="./Image_scoopdiving/Testmonial-2.jpg" />
+                </div>
+
+                <p class="user-title">KATE SMITH</p>
+                <p class="user-type">Client</p>
+              </div>
+            </div>
+
+            <div class="slider-text">
+              <p>
+                C:As certified divers, we should already have a pretty good
+                understanding of how to dive safely.
+              </p>
+
+              <div class="user mob">
+                <div class="user-img">
+                  <img src="./Image_scoopdiving/Testmonial-3.jpg" />
+                </div>
+                <p class="user-title">SAM WILSON</p>
+                <p class="user-type">Client</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- lets put the testimonial users pic and name -->
+
+        <!-- by adding desktop, the user below boxes will not show in the mobile screen -->
+        <div class="testimonial-users desktop">
+          <div class="user">
+            <div class="user-img">
+              <img src="./Image_scoopdiving/Testmonial-1.jpg" />
+            </div>
+            <p class="user-title">PATRIC GOODMAN</p>
+            <p class="user-type">Client</p>
+          </div>
+
+          <div class="user">
+            <div class="user-img">
+              <img src="./Image_scoopdiving/Testmonial-2.jpg" />
+            </div>
+
+            <p class="user-title">KATE SMITH</p>
+            <p class="user-type">Client</p>
+          </div>
+
+          <div class="user">
+            <div class="user-img">
+              <img src="./Image_scoopdiving/Testmonial-3.jpg" />
+            </div>
+            <p class="user-title">SAM WILSON</p>
+            <p class="user-type">Client</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery section -->
+
+    <section class="gallery">
+      <h1 class="title">Gallery</h1>
+      <div class="container gallery-container">
+        <!-- img1 -->
+        <div class="img-1 gimg">
+          <div class="gallery-image">
+            <img src="./Image_scoopdiving/gallery-1.jpg" />
+          </div>
+
+          <div class="goverlay"></div>
+          <div class="over-details">
+            <div class="over-content">
+              <p class="over-title">Barracuda Point</p>
+              <p class="zoom-icon">
+                <i class="fa fa-search"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- img2 -->
+        <div class="img-2 gimg">
+          <div class="gallery-image">
+            <img src="./Image_scoopdiving/gallery-2.jpg" />
+          </div>
+
+          <div class="goverlay"></div>
+          <div class="over-details">
+            <div class="over-content">
+              <p class="over-title">Blue Corner Wall</p>
+              <p class="zoom-icon">
+                <i class="fa fa-search"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- img3 -->
+        <div class="img-3 gimg">
+          <div class="gallery-image">
+            <img src="./Image_scoopdiving/gallery-3.jpg" />
+          </div>
+
+          <div class="goverlay"></div>
+          <div class="over-details">
+            <div class="over-content">
+              <p class="over-title">The Yongala</p>
+              <p class="zoom-icon">
+                <i class="fa fa-search"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- img4 -->
+        <div class="img-4 gimg">
+          <div class="gallery-image">
+            <img src="./Image_scoopdiving/gallery-4.jpg" />
+          </div>
+
+          <div class="goverlay"></div>
+          <div class="over-details">
+            <div class="over-content">
+              <p class="over-title">Thistlegorm</p>
+              <p class="zoom-icon">
+                <i class="fa fa-search"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- img5 -->
+        <div class="img-5 gimg">
+          <div class="gallery-image">
+            <img src="./Image_scoopdiving/gallery-5.jpg" />
+          </div>
+
+          <div class="goverlay"></div>
+          <div class="over-details">
+            <div class="over-content">
+              <p class="over-title">
+                Shark and Yolanda <br />
+                Reef
+              </p>
+              <p class="zoom-icon">
+                <i class="fa fa-search"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- img6 -->
+        <div class="img-6 gimg">
+          <div class="gallery-image">
+            <img src="./Image_scoopdiving/gallery-6.jpg" />
+          </div>
+
+          <div class="goverlay"></div>
+          <div class="over-details">
+            <div class="over-content">
+              <p class="over-title">Monta Ray Night Dive</p>
+              <p class="zoom-icon">
+                <i class="fa fa-search"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- img7 -->
+        <div class="img-7 gimg">
+          <div class="gallery-image">
+            <img src="./Image_scoopdiving/gallery-7.jpg" />
+          </div>
+
+          <div class="goverlay"></div>
+          <div class="over-details">
+            <div class="over-content">
+              <p class="over-title">Great Blue Hole</p>
+              <p class="zoom-icon">
+                <i class="fa fa-search"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter section -->
+
+    <section class="newsletter">
+      <div class="container newsletter-container">
+        <div class="newsletter-card">
+          <p class="newsletter-title">Newsletter</p>
+          <p class="newsletter-text">Subscribe to our newsletter</p>
+        </div>
+
+        <div class="newsletter-input">
+          <input
+            class="newsletter-email"
+            type="email"
+            placeholder="Enter your e-mail address"
+          />
+        </div>
+
+        <div class="newsletter-card">
+          <button class="btn newsletter-btn" type="button">SUBSCRIBE</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Instructors section -->
+    <section class="instructors">
+      <p class="title">Instructors</p>
+
+      <div class="container instructors-container">
+        <div class="inst-card">
+          <div class="inst-img">
+            <img src="./image_scoopdiving/Instructor-1.jpg" />
+          </div>
+
+          <p class="inst-title">Peter Martinez</p>
+          <p class="inst-description">
+            Peter is PADI Course Director and our compnay's Founder
+          </p>
+
+          <div class="inst-socialmedia">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-google-plus"></i>
+          </div>
+        </div>
+
+        <div class="inst-card">
+          <div class="inst-img">
+            <img src="./image_scoopdiving/Instructor-2.jpg" />
+          </div>
+
+          <p class="inst-title">Jane McMillan</p>
+          <p class="inst-description">
+            Jane is Divers's Speciality Instructor Trainer who joined us in
+            2010.
+          </p>
+          <div class="inst-socialmedia">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-google-plus"></i>
+          </div>
+        </div>
+
+        <div class="inst-card">
+          <div class="inst-img">
+            <img src="./image_scoopdiving/nstructor-3.jpg" />
+          </div>
+
+          <p class="inst-title">John Smith</p>
+          <p class="inst-description">
+            John has neen working with us since day one as PADI Divemaster
+          </p>
+          <div class="inst-socialmedia">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-google-plus"></i>
+          </div>
+        </div>
+
+        <div class="inst-card">
+          <div class="inst-img">
+            <img src="./image_scoopdiving/nstructor-4.jpg" />
+          </div>
+
+          <p class="inst-title">Sam Williams</p>
+          <p class="inst-description">
+            Sam is Divers's PADI Water Scuba Instructor.
+          </p>
+
+          <div class="inst-socialmedia">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-google-plus"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our blog section -->
+
+    <section class="blog">
+      <p class="title">Our Blog</p>
+
+      <div class="container blog-container">
+        <!-- img 1 -->
+        <div class="blog-card">
+          <!-- <div class="blog-extra"></div> -->
+          <div class="blog-img">
+            <img src="./image_scoopdiving/Blog-1.jpg" />
+          </div>
+          <div class="blog-extra">
+            <p class="blog-date">August 9,2019</p>
+            <p class="blog-title1">New Caledonia: The Lagoon of All Hopes</p>
+            <p class="blog-description">
+              As we dived for the very first time in the lagoon of New
+              Caledonia, at Duck Island, with only our masks and fins...
+            </p>
+          </div>
+        </div>
+
+        <!-- img2 -->
+        <div class="blog-card">
+          <div class="blog-img">
+            <img src="./image_scoopdiving/Blog-2.jpg" />
+          </div>
+
+          <div class="blog-extra">
+            <p class="blog-date">August 9,2019</p>
+            <p class="blog-title1">
+              Scuba Diving in Okinawa: A First-timer Guide
+            </p>
+            <p class="blog-description">
+              It is one of these places where it is not so straightforward to
+              organize a scuba diving trip. There are so many...
+            </p>
+          </div>
+        </div>
+
+        <!-- img 3 -->
+        <div class="blog-card">
+          <div class="blog-img">
+            <img src="./image_scoopdiving/Blog-3.jpg" />
+          </div>
+          <div class="blog-extra">
+            <p class="blog-date">August 9,2019</p>
+            <p class="blog-title1">Shore Diving in Maui & Big Island</p>
+            <p class="blog-description">
+              The Hawaiian Archipelago is full of bucket list dives with
+              exciting adventures such as diving in the crater...
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer section -->
+
+    <section class="footer">
+      <div class="container footer-container">
+        <!-- footer gallery -->
+        <div class="footer-gallery">
+          <p class="footer-title">Gallery</p>
+          <div class="footer-img">
+            <div class="ft-img">
+              <div class="fimages">
+                <img src="./Image_scoopdiving/footer-1.jpg" />
+                "
+              </div>
+              <div class="design"></div>
+            </div>
+
+            <div class="ft-img">
+              <div class="fimages">
+                <img src="./Image_scoopdiving/footer-2.jpg" />
+              </div>
+              <div class="design"></div>
+            </div>
+
+            <div class="ft-img">
+              <div class="fimages">
+                <img src="./Image_scoopdiving/footer-3.jpg" />
+              </div>
+              <div class="design"></div>
+            </div>
+
+            <div class="ft-img">
+              <div class="fimages">
+                <img src="./Image_scoopdiving/footer-4.jpg" />
+              </div>
+              <div class="design"></div>
+            </div>
+
+            <div class="ft-img">
+              <div class="fimages">
+                <img src="./Image_scoopdiving/footer-5.jpg" />
+              </div>
+              <div class="design"></div>
+            </div>
+
+            <div class="ft-img">
+              <div class="fimages">
+                <img src="./Image_scoopdiving/footer-6.jpg" />
+              </div>
+              <div class="design"></div>
+            </div>
+          </div>
+        </div>
+        <!-- quick links -->
+        <div class="quick-links">
+          <p class="footer-title">Quick Links</p>
+
+          <div class="links">
+            <div class="links-child">
+              <ul>
+                <li><span class="link-line"></span>About Us</li>
+                <li><span class="link-line"></span>What We Offer</li>
+                <li><span class="link-line"></span>FQA</li>
+                <li><span class="link-line"></span>Instructors</li>
+              </ul>
+            </div>
+
+            <div class="links-child">
+              <ul>
+                <li><span class="link-line"></span>Contact Us</li>
+                <li><span class="link-line"></span>Blog</li>
+                <li><span class="link-line"></span>Gallery</li>
+                <li><span class="link-line"></span>Pricing</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Get in touch -->
+        <div class="get-in-touch">
+          <p class="footer-title">Get in touch</p>
+
+          <div class="contact">
+            <div class="contact-child">
+              <p class="contact-icon">
+                <i class="fa fa-map-marker"></i>
+              </p>
+              <p class="contact-detail">
+                523 Sylvan AVe, 5th Floor <br />
+                Mountain View, CA 94041 USA
+              </p>
+            </div>
+
+            <div class="contact-child">
+              <p class="contact-icon">
+                <i class="fa fa-phone"></i>
+              </p>
+              <p class="contact-detail">+1 (844) 123 456 78</p>
+            </div>
+
+            <div class="contact-child">
+              <p class="contact-icon">
+                <i class="fa fa-envelope-o"></i>
+              </p>
+              <p class="contact-detail">info@demolinl.org</p>
+            </div>
+            <!-- Social Meida icons  -->
+            <div class="soical-media-icon">
+              <p>
+                <i class="fa fa-facebook"></i>
+              </p>
+
+              <p>
+                <i class="fa fa-twitter"></i>
+              </p>
+
+              <p>
+                <i class="fa fa-instagram"></i>
+              </p>
+
+              <p>
+                <i class="fa fa-google-plus"></i>
+              </p>
+
+              <p>
+                <i class="fa fa-skype"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Copy right section -->
+
+    <div class="copyright">
+      © 2021 Divers. All rights reserved. Privacy Policy.
+      <!-- or we can use.. ' &copy; saba tekle  '..to get the copy right icons -->
+    </div>
+
+    <!-- For the Javascript script, i will use the scoopdiving.js  -->
+    <script src="ScoopDiving.js"></script>
+  </body>
+</html>
+
+<!-- For the responisvness part, we create a new css 'ScoopDiving-Resp.css' -->
+<!-- template source:https://livedemo00.template-help.com/wt_prod-22021/-->
+
+<!-- I stop at 57 vedio part 2 design clone responsiness  -->

@@ -1,0 +1,2035 @@
+/* font imports  */
+
+/* for headings  */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;700&display=swap');
+
+/* for normal text  */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+/* poppins  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* for textual content  */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+
+
+
+
+*{
+    margin:0px;
+    padding:0px;
+}
+
+/*Global CSS */
+.container{
+    width:62%; /*help us to do the containment */
+    display:flex;
+}
+
+.title{
+    font-family:"comfortaa","sans-serif";
+    font-size:44px;
+    font-weight:700;  /*font wegiht didnt take a px or % */
+    text-align:center;
+    /* margin-top:50px;  /* he use 60px */
+
+}
+
+/* if we hide the br "mob"  class from desktop 'Greaterthan' 560px screen the header will break in to 2 line as the  same like template. what ever having a class "mob"...will be hidden for the desktop screen sizse.*/ 
+
+.mob{
+    display:none !important ;  /*meaning for testimonial "user have a flex display, and the mob display will not work due to the animation and it will show the users. so we put !important, meaning no matter other element have display:flex/ other, always hide element with mob class . and it will hide for the desktop screen */
+}
+
+/* --- */
+
+/* banner CSS */
+
+.btt{
+height:50px;
+width:50px;
+color:white;
+background-color:#0473db;
+
+border-radius: 50%;
+text-align:center;
+display:flex;
+justify-content:center;
+position:fixed;
+/*position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element. */
+z-index:110;  
+/* the whole site goes behind the arrow and the arrow is on the top of the page. when I scroll
+tup/down the page, the arrow is shown at the top of the page */
+
+margin-left:95%; /*it will move to the left side. */
+
+margin-top:90vh;  
+/*to move it down. vh stands for viewport height and vw is for viewport width 
+setting an element to a width value of 50vw means that the element will have a width that's 50% of the viewport size, and this stays true when the viewport is resized.*/
+
+opacity:0.6;
+/*opacity property specifies the opacity/transparency of an element. property can take a value from 0.0 - 1.0. The lower value, the more transparent. If it is 1 which is the default one, it will have the orginal transparent of the imgae*/
+
+ transform: translateY(15vh);  
+ /*I want to make it down(vertically) till it reach some point and it w will show up at some point . that why I use translalteY to make it down. the below link help us to convert vh to px
+ https://khaledkzy.github.io/pixel-vh-vw-converter/*/
+transition:0.4s;
+cursor:pointer;
+
+}
+
+.btt:hover{
+    opacity:1;  /*when we hover it, the opacity will removed*/
+}
+
+.banner{
+
+    width:100%;
+   
+    height: 90vh;
+    /* background-color:cornflowerblue; */
+    /* background-image:url("./Image_scoopdiving/diver1.png"); */
+     background-image:url("./Image_scoopdiving/slide-1.jpg");
+    background-size:cover;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+
+}
+
+.prev-button{
+    width:3.5%;
+    height:60px;
+    background-color:rgba(255,255,255,0.3);
+    border-top-right-radius: 50%;
+    border-bottom-right-radius:50%;
+    color:white;
+    font-family: 'poppins', sans-serif;
+    font-weight:600;
+   display:flex;
+   flex-direction:column;
+   justify-content:center;
+   text-indent:10px;
+   cursor:pointer;
+   font-size:14px;
+   letter-spacing:1px;
+
+}
+
+.prev-button > .btn-line{
+    width:50%;
+    height:2px;
+    display:inline-block;
+    background-color:white;
+    margin-top:2px;
+    margin-left:10px;
+    transition:0.3s;
+
+}
+
+.slider-btn{
+    cursor:pointer;
+}
+
+/* lets hover on the parent and do the work /change on the child */
+.prev-button:hover > .btn-line{
+    transform:scaleX(0.6);
+}
+
+
+
+
+.next-button{
+     width:3.5%;
+    height:60px;
+    background-color:rgba(255,255,255,0.3);
+    border-top-left-radius: 50%;
+    border-bottom-left-radius:50%;
+    color:white;
+    font-family: 'Poppins', sans-serif; 
+    font-weight:bold;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    text-indent:20px;
+    cursor:pointer;
+    font-size:14px;
+    
+}
+
+.next-button > .btn-line{
+    width:50%;
+    height:2px;
+    display:inline-block;
+    background-color:white;
+    margin-top:2px;
+    margin-left:20px;
+    transition:0.3s;
+   
+
+}
+
+
+/* lets hover on the parent and do the work /change on the child */
+.next-button:hover > .btn-line{
+    transform:scaleX(0.6);
+}
+
+
+
+.banner-content{
+    width:62%;
+    height:90%;
+  /* background-color:gray */
+
+}
+
+.header{
+    width:100%;
+    height:60px;
+    /* background-color:rgb(219, 171, 171); */
+    display:flex;
+    justify-content:space-between;
+    
+  
+
+}
+
+.header-child{
+    width:25%;
+    /* background-color:red; */
+    color:white;
+   font-family: 'Lato', sans-serif;
+   font-weight:400;
+    
+
+}
+
+.header-child:nth-child(2){
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+}
+
+.header-child:nth-child(3){
+    font-size:30px;
+    display:flex;
+    justify-content:flex-end;
+
+}
+
+.en{
+    font-size:17px;
+    background-color:white;
+    color:black;
+    border-radius:50%;
+    text-align:center;
+    /*by given the same width and height,they look square and five border-radius  to make it circle*/
+    height:32px;    
+    width:32px;
+    display:inline-block;
+    line-height:30px;
+    margin-left:10px;
+
+}
+
+/* nav */
+.nav{
+    height:70px;
+     width:100%;  /*based on the step 4, for the javascript */
+    /* background:cyan;  */
+
+    /* margin-top:30px; */  /*i dont need this one for based on step3, for the javascript . will give to the nav-parent*/
+
+    border-top:1px solid rgba(255,255,255,0.23);
+    border-bottom:1px solid rgba(255,255,255,0.23);
+    display:flex;
+    justify-content:center;
+     color:white;
+
+    /* Step1. this property is added for the javascript */
+    /* position:fixed; */
+     /*position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element. */
+
+    /* left:0;  */
+    /*by giving this one, will make the nav to strech it and will cover 100% width.
+    but during the page scroll, the nav is not streach. so we need to give a parent to the nav in order to avoid the nav strech.I add the new parent name called "nav-parent" so that the nav will not streach but only the parent will steach  */
+
+    /* step:4, then give the nav a width of 62%, so that it will have the same width as its parent.will add at the js script. width:62%*/
+
+   
+}
+
+.nav-parent{
+
+    /* Step:2 by giving the same widht and height as nav,they will have the same position . But the parent of all this child is the "banner-content..which have a widht of 62%. meaning the parent is 62%,and inside it is the child will have the 100%, which will cover all the 62% of its parent width*/
+
+    width:100%;
+    height:70px;
+    /* background-color:red; */
+    /* Step:3, to make the nav-parent to be the same of the parent, which is equal to its banner-content widht, we must give it 62% so that it will be out side of the flow and will be equal to its orgial parent which is the 62%. so that I will remove the position fixed , left:0 from the nav and give it to the nav-parent. will add at the js script */
+    /* position:fixed;
+    left:0; */
+    display:flex;
+    justify-content:center;
+      margin-top:30px;
+      z-index: 100;
+}
+
+
+.nav>ul{
+    display:flex;
+    align-items:center;
+    width:50%;
+    justify-content:space-between;
+
+}
+
+.nav>ul>li{
+    list-style-type: none;
+   font-family: 'Poppins', sans-serif; 
+   /* color:white; */
+   font-weight:600;
+   font-size:14px;
+   letter-spacing:1px;
+   line-height:70px;  /*line height must be the same as the height of the parent (.nav height=70px) so that the elemen will become at the middle/center */
+   cursor:pointer;
+   transition:0.3s;
+}
+
+.nav>ul>li:hover{
+    color:#f8ea49;
+    
+}
+
+.nav>ul>li:first-child{
+   color:#f8ea49;  /*by defualt the color of HOME is this color on the reall website */
+}
+
+.banner-text{
+    height:400px;
+    width:100%;
+    /* background-color:white; */
+    margin-top:100px;  /*he use 80px */
+    color:white;
+}
+
+.banner-text>h1{
+
+    font-family: 'Comfortaa', sans-serif; 
+    font-size:62px;   /*he use 62px */
+    line-height:85px;
+    color:white;
+
+}
+
+.banner-text>p{
+    font-size:19px;
+font-family: 'poppins', sans-serif;
+   color:rgba(255,255,255,0.5);
+   letter-spacing:0.07em;
+   margin-top:20px;
+
+}
+
+.btn{
+    padding-top:19px;
+    padding-bottom:19px;
+    padding-right:37px;
+    padding-left:37px;
+    border-radius:6px;
+    border:2px solid #f8ea49;
+    font-size:14px;
+   font-family: 'Poppins', sans-serif;
+    font-weight:700;
+    background-color: #f8ea49;
+    letter-spacing:.1em;
+    margin-top:25px; 
+    text-transform: uppercase;
+}
+
+/* the website maiantaine a contaiments, meaning once we put our arrow all the images are following
+the same line from top to bottom. in this case the width=60% (at the .banner-content) is our contaiments */
+
+/* destination property */
+
+.destination{
+    padding-top:110px;
+    padding-bottom:60px;
+    /* background-color:darkkhaki;   /*i will keep same contaninment for the whole different sections */
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    /* height:630px; */
+
+}
+.destination>.title{
+    width:100%;
+    padding-top:40px;
+    padding-bottom:25px;
+
+}
+
+.destination-container{
+    margin-top:40px;
+    /* background-color:darkseagreen; */
+    justify-content:space-between;
+    flex-wrap:wrap;  /*this will help me for the responisivness to bring the content all down aligned */
+    
+}
+
+.dest-card{
+
+    height:450px;
+    width:31.5%;
+    /* background-color:blue;   */
+    position:relative;
+    cursor:pointer;
+   
+
+}
+
+
+/* I create this extra, once we hover on the dest-card as a whole, it will change the effect and have a border shadow. */
+.dest-extra{
+    width:100%;
+    height:450px;
+    /* background-color:crimson; */
+    position:absolute; /* i give position absoulet to the extra cuz all other will go below it. I will give to all the main one postion relative so that they will be on the top of the extra one */
+
+    transition:0.25s;
+    border-radius:3px;
+    
+
+}
+
+.dest-card:hover .dest-extra{
+transform:scale(1.07);  /* it will scale the extra one not the img or the text */
+box-shadow:0 0 10px lightgray;
+}
+
+.dest-img{
+    width:100%;
+    box-sizing:border-box;
+    border:1px  solid #e1e1e1;
+    height:270px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color:white;
+     position:relative;
+      transition:0.25s
+   
+
+}
+
+.dest-img>img{
+    width:90%;
+    height:240px;
+    transition:0.25s   
+}
+
+.dest-card:hover .dest-img>img{
+
+ transform:scaleX(1.09) scaleY(1.1);
+}
+
+.dest-card:hover .dest-img{
+    border:none;
+}
+
+
+.dest-title{
+   font-family: 'Comfortaa', sans-serif;
+   font-size:26px;
+   text-align:center;
+   margin-top:20px;
+    position:relative;
+    cursor:pointer;
+    transition:0.25s;
+    font-weight:700;
+
+}
+
+.dest-title:hover{
+    color:#0473ab; 
+}
+
+.dest-description{
+    font-size:15px;
+     font-family: 'poppins', sans-serif;
+   text-align:center;
+      margin-top:15px;
+      color:#777777;
+       position:relative;
+
+}
+
+.dest-btn{
+   padding-bottom:2px;
+    border-bottom:2px solid #a3a3a3;
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    color:#a3a3a3;
+    background-color:transparent;
+    /* border-radius:5px; */
+    font-weight:bold;
+    font-size:14px;
+      font-family: 'poppins','sans-serif';
+     letter-spacing:0.05em;
+     transition:0.25s;
+}
+
+.dest-btn-parent{
+    margin-top:22px;
+    text-align:center;
+     position:relative;
+}
+
+/* I will hover on the parent (dest-card) but the change will be taken onthe dest-btn */
+.dest-card:hover .dest-btn{
+     padding-top:8px; 
+     padding-bottom:8px; 
+      padding-right:22px; 
+     padding-left:22px; 
+     border:2px solid #0473ab; 
+      color:#0473ab; 
+       border-radius:5px;
+       font-size:14px;
+       letter-spacing:0.05em;
+
+           
+}
+
+/* Equipments Css */
+
+.equipments{
+    padding-top:120px;
+    padding-bottom:120px;
+    width:100%;
+    /* height:300px; */
+    /* background-color:red; */
+    background-image:url('./Image_scoopdiving/Equipment.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:space-between;
+
+}
+
+.equipment1{
+    width:38%;
+    height:375px;
+    /* background-color:green; */
+}
+
+/* to make the first 2 eq on the right side one */
+
+
+.equipment1:nth-child(1){
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+    
+}
+
+.eq{
+    width:50%;
+    /* background-color:red; */
+    height:187.5px;
+    box-sizing:border-box;
+    display:flex;
+    justify-content:space-between;
+   
+}
+
+
+
+.equipment1>.eq:nth-child(1){
+    align-items: flex-start;
+}
+
+/* to  make the first 2 img to the right */
+.eq:nth-child(1){
+    margin-right:30px;
+}
+
+.eq:nth-child(2){
+    margin-right:30px;
+}
+
+
+
+
+.eq-child{
+    display:flex;
+    justify-content:space-between;
+    width:100%;
+    /* background-color:darkcyan; */
+   
+}
+
+
+.brd{
+    border-bottom:1px solid #e1e1e1;
+  
+}
+
+.eq-detail{
+    width:75%;
+    
+    /*flex grown means what ever free space after the img , the img will take it  and it will become to the last end of the box */
+
+}
+
+.right{
+    text-align:right;
+}
+
+.left{
+    text-align:left;
+}
+.eq-title{
+   font-family: 'comfortaa', sans-serif; /*sir uses this one */
+   font-size:23px;   /*sir use 26px */
+    position:relative;
+    cursor:pointer;
+    transition:0.25s;
+    font-weight:700;
+    
+}
+
+.eq-title:hover{
+      color:#0473ab; 
+}
+
+.eq-desc{
+
+    font-size:15.5px;
+   font-family: 'Lato', sans-serif; 
+    margin-top:15px;
+    line-height:22px;
+    letter-spacing:0.025em;
+    /* background-color:aquamarine; */
+          
+}
+
+/* for the 2nd right content */
+
+.equipment1>.eq:nth-child(2){
+   
+    align-items:flex-end;  
+}
+
+/* .eq-img property is given by sir, but I modify it  */
+/* .eq-img{
+    margin:15px;
+    height:100%;
+} */
+
+
+
+.img2{
+    /* background-color:gray; */
+    margin-right:25px;
+    margin:15px;
+    /* height:100%; */
+}
+
+
+ .img1 {
+    margin:15px;
+    /* height:100%; */
+    /* background-color:gray; */
+     margin-left:45px;  
+    
+} 
+
+
+
+
+
+/* ------- */
+/* counter CSS */
+
+.counter{
+    width:100%;
+    padding-top:80px;
+    padding-bottom:80px;
+    background-color:greenyellow;
+    background-image:url('./Image_scoopdiving/par-1.jpg');
+    background-position: center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    position:relative;
+    display:flex;
+    justify-content:center;
+}
+
+
+.counter-container{
+flex-wrap:wrap;
+}
+.counter-child{
+     width:25%;  /*they are 4..(100/4=250 . sicne they share the equal width,we can't wrap it.*/
+    /* background-color:gray; */
+    height:250px;
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    align-items:center;
+
+
+}
+
+.counter-number{
+    font-size:58px;
+    font-family: 'Comfortaa', sans-serif;
+    color:white;
+    font-weight:600px;
+
+}
+
+.counter-text{
+    font-size:18px;
+     font-family: 'poppins', sans-serif;
+     color:white;
+     font-weight:600;
+     text-align:center;
+     letter-spacing:1.35px;
+
+}
+
+.counter-line{
+    width:15%;
+    height:1px;
+    background-color:white;
+     margin-top:18px; /*for the Gap among them */
+    margin-bottom:24px;
+
+}
+
+/* Why choose css */
+
+.why{
+    padding-top:110px;
+    padding-bottom:110px;
+    width:100%;
+    background-color:white;
+    display:flex;
+    justify-content:center;
+}
+
+.why-container{
+   
+    flex-direction:column;
+    
+}
+
+.why-row-1{
+    /* background-color:lightseagreen; */
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+  
+
+}
+
+.why-banner{
+    width:48%; /*sir use width:47.5% */
+    height:600px;
+    /* background-color:gray; */
+    background-image:url('./Image_scoopdiving/why-image.png');
+    background-size:contain; /*contain means when the image height=100%, cover means when the image width=100% */
+    background-position:center;
+
+    background-repeat:no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:flex-end
+    
+}
+
+.why-indicators{
+    height:15px;
+    width:12%;
+    /* background-color:red; */
+    margin-bottom:30px;
+    display:flex;
+    justify-content:space-between;
+
+    
+}
+
+.why-indicators>p{
+    height:15px;
+    width:15px;
+ background-color: #d7d7d7;
+    /* background-color:gray; */
+    border-radius:50%;
+
+}
+
+.why-indicators>p:first-child{
+    background-color:#0473ab;
+}
+
+.why-detail{
+width:50%;
+/* background-color:yellow; */
+margin-left:50px;
+
+}
+
+.why-detail>.title{
+    text-align:left;
+    margin-top:90px;          /*120px; */
+
+}
+
+.information{
+    width:100%;
+    /* background-color:red; */
+    margin-top:20px;
+}
+
+.info-ele{
+    height:90px;
+    background-color:white;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+}
+
+.circle-btn{
+    height:45px;
+    width:45px;
+    background-color:white;
+    border-radius:50%;
+    text-align:center;
+    line-height:45px;
+    font-weight:700;
+    box-shadow:0 0 8px lightgray;
+    color:#0473ab;
+    font-family: 'poppins', sans-serif;
+    font-size:22px;
+    transition:0.25s;
+    cursor:pointer;
+
+}
+
+.circle-btn:hover{
+    transform:rotateZ(90deg);
+}
+
+.info-text{
+   font-family: 'poppins', sans-serif;
+   font-size:18px;
+   font-weight:500;
+   width:88%;
+
+}
+
+.why-row-2{
+    width:100%;
+    /* background-color:mediumpurple; */
+   
+    box-sizing:border-box;
+    display:flex;
+    justify-content:space-between;
+    margin-top:50px;
+   
+    
+}
+
+.why-reason{
+    width:31.5% ; /*which is the same like dest-card  for destination */
+    height:150px;
+    border:1px solid #e1e1e1;
+    /* background-color:red; */
+    display:flex;
+    justify-content:center;
+    align-items:center;
+   
+}
+
+.reason-title{
+    font-size:22px;
+    font-family: 'comfortaa', sans-serif;
+    font-weight:500;
+    cursor:pointer;
+    transition:0.25s;
+
+}
+
+.reason-title:hover{
+    color:#0473ab;
+    
+}
+
+.reason-desc{
+    font-family: 'Lato', sans-serif;
+    font-size:15px;
+    color:gray;
+    letter-spacing:0.75px;
+    margin-top:10px;
+}
+
+.reason-detail{
+    margin-left:10px;
+}
+
+
+/* Testimonials Css */
+
+.testimonial{
+    padding-top:110;
+    padding-bottom:80px;
+    background-color:#eff3f8;
+    display:flex;
+    flex-direction:column;  /*if we give flex drection to column, we must give align-items */
+    align-items:center;
+   
+}
+
+.testimonial>.title{
+    margin:0px;  /*sir give this one */
+    margin-top:30px; 
+
+}
+
+.testimonial-container{
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin-top:50px;
+
+}
+
+.testimonial-slider{
+    width:80%;
+    /* height:100px; */
+    /* background-color:aqua; */
+    overflow:hidden;
+}
+
+.testimonial-slider>.slider{
+    width:300%;
+    /* height:100px; */
+    /* background-color:coral; */
+    display:flex;
+
+      /* give animation info */
+    animation-name:testimonial-text;
+    animation-duration:20s;
+    animation-delay:4s;
+   animation-timing-function:alternate;   /*The animation is played forwards first, then backwards */
+    animation-play-state:running;
+    animation-iteration-count: infinite;
+    animation-fill-mode:alternate; /*sets how an animation progresses through the duration of each cycle.*/
+
+}
+
+.slider-text{
+    width:33.33%;  /*100/3=33.3333 */
+    /* height:100px; */
+    font-size:17px;  /* sir use 18px */
+    font-family: 'poppins', sans-serif;
+    text-align:center;
+    color:#777777;
+  
+    
+}
+
+@keyframes testimonial-text{
+    3%{
+        margin-left:-100%;  /*1st msg will start to move using the 0.15s (3% / 20%) and                           will wait and stop at frist mesg for 4s*/
+    }
+
+    25%{
+        margin-left:-100%; /*B comies*/
+    }
+
+    28%{
+        margin-left:-200%; /*C comes */
+    }
+
+    50%{
+        margin-left:-200%; /*stay at C*/
+    }
+
+    53%{
+        margin-left:-100%; /*back to 2nd mesg */
+    }
+
+    75%{
+        margin-left:-100%; /*stop at 2nd mesg for 4s */
+    }
+
+    78%{
+        margin-left:0%; /*back to 1st mesg */
+    }
+
+    100%{
+        margin-left:0%  /*stop longer at A */
+    }
+    
+
+}
+
+/* review users css */
+
+.testimonial-users {
+    width:70%;
+    height:200px;
+    /* background-color:#f8ea49; */
+    margin-top:40px;
+    display:flex;
+    justify-content:space-between;
+    
+}
+
+.user{
+    width:25%;
+    /* background-color:cadetblue; */
+    height:200px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+   
+}
+
+
+.user-img{
+    height:90px;
+    width: 90px;
+   /* background-color:red; */ 
+   overflow:hidden;
+}
+
+
+.user-img>img{
+border-radius:50%;
+}
+
+
+.user-title{
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:0.1em;
+   font-family: 'poppins', sans-serif;
+   color:#151515;
+   margin-top:20px;
+ 
+
+}
+
+.user-type{
+    font-style:italic;
+    letter-spacing:0.025em;
+     color:#0473ab;
+     margin-top:5px;
+     font-size:15px;
+    font-family: 'poppins','sans-serif';
+
+}
+
+
+/* Note: when each message is active, the users image got active/visible and the other 2 imges got fade out and to do that we need to do the opacity at the animation level. the message goes like from  A-> B-> C->"back to " ->B->A */
+
+.testimonial-users .user:nth-child(1){
+    animation-name:user1;
+    animation-play-state:running;
+    animation-duration:20s;
+    animation-timing-function:alternate;
+    animation-iteration-count:infinite;
+    animation-delay:4s;
+}
+
+.testimonial-users .user:nth-child(2){
+    animation-name:user2;
+    animation-play-state:running;
+    animation-duration:20s;
+    animation-timing-function:alternate;
+    animation-iteration-count:infinite;
+    animation-delay:4s;
+    opacity:0.5;
+
+}
+
+.testimonial-users .user:nth-child(3){
+    animation-name:user3;
+    animation-play-state:running;
+    animation-duration:20s;
+    animation-timing-function:alternate;
+    animation-iteration-count:infinite;
+    animation-delay:4s;
+    opacity:0.5;
+
+}
+
+/* to match the opacity(fadeout of images ) with the the review, we will use the same time or % as the animation (testimonial-text) of the reviews. For every active Reviews , the user imgate will get active/visible and the other 2 images will get fade out. Opacity is opposite of transparency.
+
+opacity: 0; The element is fully transparent (that is, invisible).
+opacity: 0-1 (b/n 0 and 1); The element is translucent (that is, content behind the element can be seen).
+opacity: 1; The element is fully opaque (visually solid) (that is, visible).
+*/
+
+@keyframes user1{
+
+     3%{
+        opacity:0.5;  /*for starting */
+    }
+
+    25%{
+        opacity:0.5;  /*for B */
+    }
+
+    28%{
+        opacity:0.5; /*stop at B */
+    }
+
+    50%{
+        opacity:0.5;  /*for C */
+    }
+
+    53%{
+        opacity:0.5;  /*stop at C */
+    }
+
+    75%{
+       opacity:0.5;  /* back to B */
+    }
+
+    78%{
+        opacity:1;  /*back to A*/
+    }
+
+
+
+    100%{
+           opacity:1; /*stop at A */
+    }
+
+}
+
+
+
+@keyframes user2{
+     3%{
+         opacity:1;  /*for user B this is the starting point */
+    }
+
+    25%{
+         opacity:1;
+    }
+
+    28%{
+        opacity:0.5;
+    }
+
+    50%{
+        opacity:0.5;
+    }
+
+    53%{
+        opacity:1;  /*back to B again */
+    }
+
+    75%{
+         opacity:1; /*stop at 2nd mesg for 4s */
+    }
+
+    78%{
+         opacity:0.5;
+    }
+
+    100%{
+          opacity:0.5;
+    }
+
+}
+
+
+@keyframes user3{
+     3%{
+         opacity:0.5;
+    }
+
+    25%{
+         opacity:0.5;
+    }
+
+    28%{
+         opacity:1; /*start for C */
+    }
+
+    50%{
+         opacity:1;  /*stop at C*/
+    }
+    53%{
+         opacity:0.5;
+    }
+
+    75%{
+         opacity:0.5;
+    }
+
+    78%{
+         opacity:0.5;
+    }
+
+    100%{
+         opacity:0.5; 
+    }
+}
+
+/* Gallery Css */
+
+.gallery{
+    width:100%;
+    padding-top:110px;
+    padding-bottom:110px;
+    background-color: #ffffff;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    font-size:20px;
+     font-family:"comfortaa","sans-serif";
+   
+}
+
+
+
+
+.img-1{
+    grid-area:img1;
+   
+}
+
+.img-2{
+    grid-area:img2;
+  
+}
+
+.img-3{
+    grid-area:img3;
+   
+}
+
+.img-4{
+    grid-area:img4;
+ 
+}
+
+.img-5{
+    grid-area:img5;
+   
+}
+
+.img-6{
+    grid-area:img6;
+   
+}
+
+.img-7{
+    grid-area:img7;
+   
+    
+}
+
+.gallery-container{
+display:grid; 
+
+margin-top:40px;
+
+grid-template-columns:270px 270px 270px 270px;  /*i will need 4 columns*/
+grid-template-rows:repeat(3,250px);
+ /* or like this meaining the same as repeate 250px , 3times */
+grid-template-areas:"img1 img2 img3 img4"
+                    "img5 img2 img6 img6"
+                    "img7 img7 img6 img6";  /*img6 img6 means it will streach */
+
+column-gap:30px;
+row-gap:30px;                
+
+}
+
+.gimg{
+    height:100%;
+    cursor:pointer;
+    display:flex;
+    justify-content:center;
+    position:relative; /*the img will postions related to its parent */
+    width:100%;
+}
+
+.gallery-image>img{
+    height:100%;
+}
+.gallery-image{
+    position:absolute;  /* the img will be position to its nearest object */
+    height:100%;
+    width:100%;
+
+  
+   
+}
+.goverlay{
+ position:absolute;
+ height:100%;
+ width:100%;
+ /* background-color:rgba(255,255,255,0); */
+ transform:scale(0.7) ; /*we are scaling down. the defualut scale  is =1*/
+ cursor:pointer;
+ transition:0.4s;
+  align-items:center;
+  display:flex;
+ justify-content:center;
+  /* background-color:gray; */
+  
+  
+ 
+
+  /* I am not going to use visibility for this  example */
+ /*visibility:hidden;   /*I dont want to use display:none, as it will remove the text and search icons. But I can use visibility:hide to hide it but still it is there and once we hover on it, it will show up the white. see the below code.  */
+}
+
+.gimg:hover>.goverlay{
+    transform:scale(1);
+    background-color:rgba(255,255,255,0.96);
+   display:flex;
+   align-items:center;
+   justify-content:center;
+    /* visibility:visible;  /*once we hover on it we will see the text and the serach icons */
+}
+
+.over-details{
+      position:absolute;  /*so the text is not going to scale by giving a position */
+   width:270px;
+   height:100%;
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+    justify-content:center;
+    cursor:pointer;
+    margin:auto; 
+     /* background-color:red;   */
+
+}
+
+.over-title{
+    font-size:22px;
+    font-family:"comfortaa","sans-serif";
+    width:100%;
+    text-align:center;
+    font-weight:700;
+    letter-spacing:-0.88px;
+    color:rgba(0,0,0,.0);
+    transition:0.4s;
+    
+    
+}
+
+.gimg:hover .over-title{
+    color:rgba(0,0,0,1);
+}
+
+.over-content{
+height:160px;
+width:100%;
+/* background-color:yellow; */
+transition:0.4s;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+
+
+
+}
+
+.gimg:hover .over-content{
+    height:100px;  /*once we hover it, the text goes down */ 
+
+}
+
+.zoom-icon{
+  background-color:rgba(4,115,219,0);  /*the last one is 0, means it is completely transparent */
+    height:50px;
+    width:50px;
+    color:rgba(255,255,255,0);
+    border-radius:50%;
+    line-height:50px;
+    text-align:center;
+    font-size:25px;
+    margin-left:60px;
+    transition:0.4s;
+    margin-top:100px;
+    
+
+}
+
+.gimg:hover .zoom-icon{
+    margin-left:100px;
+    margin-top:20px;
+     background-color:rgba(4,115,219,1);  /*the last one is 1, means it is visible */
+    color:rgba(255,255,255,1);
+}
+
+
+/* Newsletter CSS */
+
+.newsletter{
+    width:100%;
+    /* height:80px; */
+    padding-top:110px;
+    padding-bottom:110px;
+    /* background-color:red; */
+    background-image:url('./Image_scoopdiving/par-2.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+  
+   
+}
+
+.newsletter-container{
+    justify-content:space-between;
+    /* flex-wrap:wrap; */
+    align-items:center;
+
+}  
+
+.newsletter-card{
+
+    width:26%;
+    /* background-color:gray; */
+    display:flex; 
+    justify-content:space-between;  
+flex-direction:column; 
+    /* align-items:flex-start; */
+    
+
+}
+
+ .newsletter-title {
+    font-size:43px;
+    font-family: 'Comfortaa', sans-serif;
+    color:white;
+    font-weight:700;
+    line-height:1.1;
+    display:flex;
+    justify-content:flex-start;
+    flex-direction:column;
+    align-items:center;
+     margin-top: 0px;
+    /* background-color:gray; */
+}
+
+
+.newsletter-text{
+    font-size:15px;
+     font-family: 'Lato', sans-serif;
+   /* color:rgba(255,255,255,0.5); */
+   color:#ffffff;
+     font-weight:400;
+     /* text-align:left; */
+     letter-spacing: .05em;
+     opacity:0.7;
+     margin-top: 18px;
+   
+  
+} 
+
+.newsletter-input{
+    width:55%;
+    /* width:53%; */
+    height:100%;
+    /* background-color:bisque; */
+    margin-left:45px;
+    margin-right:45px;
+    justify-content:center; 
+
+}
+.newsletter-email{
+    display:block;
+    width:100%;
+     min-height:70px;              /*40px; */
+    font-size:18px;
+    font-weight:400;
+    letter-spacing:0.025em;
+ font-family: 'poppins','sans-serif';
+    background-color:transparent;
+    border-width:0 0 1px 0;  /*to make it thick or thin line */
+  color:#ffffff;
+    text-align:center;
+    border:none;
+    border-bottom:1px solid white; 
+    outline:none;   /*this help us to remove the box border when we are doing the email entry */
+    padding:10px 0;
+  
+}
+
+
+
+.newsletter-email::placeholder {
+  color:#ffffff;
+  font-size: 16px;
+}
+
+
+
+/* Note: for the button, it will take the global class  "btn" property and i added this few ones */
+
+.newsletter-btn{
+   
+    margin-top:25px;
+    display:flex;
+    justify-content:center;
+    text-align:center;
+    transition:0.3s;
+    cursor:pointer;
+    text-align:center;
+} 
+ .newsletter-btn:hover{
+     
+     border:2px solid #0473ab; 
+     background-color:#0473ab;
+      color:#ffffff;
+
+          
+}
+
+
+
+
+
+/* Instructors CSS*/ 
+
+.instructors{
+   
+    width:100%;
+    padding-top:90px;
+    padding-bottom:90px;
+    background-color:#ffffff;
+    display:flex;
+    justify-content:space-between;
+     /* by usibg the flex-direction:column and align-items :center, I will make the header Instructors  on the top of the child containers */
+    flex-direction:column;
+    align-items:center;
+
+
+
+}
+.instructors>.title{
+    width:100%; 
+    padding-top:70px;
+    padding-bottom:70px;   
+    font-weight: 700;
+    font-family: "Comfortaa", cursive;
+    letter-spacing: 0;
+    color: #151515;
+
+}
+
+.instructors-container{
+    /* help us to warp and make a space among the boxes under the product parent */
+
+flex-wrap:wrap;
+justify-content:space-between;
+    margin-top: 20px;
+}
+
+
+.inst-card{
+
+    /* this child is bigger than the grandparent product, so to make them wrap , give a flex wrap to its reall parent that is products-container */
+
+    width:23.5%;
+  
+ position:relative;   
+    cursor:pointer;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; 
+    /* height:400px; */  /*no need to give height */
+
+}
+
+
+
+
+.inst-card:hover img{
+transform:scale(1.1);  /* it will scale the img only. Meaning any where inside the green, which is the inst-card hover will have made an effect onthe img*/
+
+
+}
+
+.inst-card img{
+      transition:0.25s;
+}
+
+.inst-img{
+     width:100%;
+     display:flex;
+     height: 230px;
+      overflow:hidden;
+     position:relative;   /*cuz of the position relative to the parent , it will have a fit the  position of the  box */
+         position:relative;  
+      /* background-color:red; */
+
+}
+
+.inst-title{
+    font-family: 'comfortaa','sans-serif';
+    font-size: 20px;
+    margin-top: 30px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    transition: .25s;
+    font-weight: 700;
+
+}
+
+.inst-title:hover{
+color:#0473ab; 
+}
+
+.inst-description{
+         font-size: 15px;
+    font-family: 'poppins','sans-serif';
+    text-align: center;
+    margin-top: 20px;
+    color: #777777;
+    position: relative;
+
+}
+
+.inst-socialmedia{
+  
+    /* background-color:pink;  */
+    width: 50%;
+    display: flex;
+    font-size: 20px;
+    margin-top: 30px;
+    justify-content: space-between;
+    
+     
+}
+
+.inst-socialmedia>i{
+    transition: .25s;
+    cursor: pointer;
+}
+
+.inst-socialmedia>i:hover{
+    color: #0473db;
+    
+}
+
+
+
+
+/* Our Blog CSS */
+
+.blog{
+    width:100%;
+    padding-top: 100px;
+    padding-bottom:80px;
+    background-color: #eff3f8;
+    display:flex;
+    justify-content:space-between;
+    /* by usibg the flex-direction:column and align-items :center, I will make the header blog on
+    the top of the child containers */
+    flex-direction:column;
+    align-items:center;
+
+}
+
+.blog>.title{
+      font-family: 'comfortaa','sans-serif';
+    font-size: 44px;
+    /* margin-top: 30px; */
+    line-height: 1.36364;
+    /* text-align: center; */
+    position: relative;
+    cursor: pointer;
+    transition: .25s;
+    font-weight: 700;
+  
+
+}
+
+
+.blog-container{
+    /* help us to warp and make a space among the boxes under the product parent */
+flex-wrap:wrap;
+justify-content:space-between;
+  margin-top: 40px;
+
+}
+
+.blog-card{
+
+    /* this child is bigger than the grandparent product, so to make them wrap , give a flex wrap to its reall parent that is products-container */
+    width:31%;
+    /* background-color:blue; */
+
+}
+
+.blog-extra{
+   height:300px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: white;
+  /*  background-color:crimson; */
+  
+    
+
+}
+
+.blog-card img{
+  transition:0.25s;
+}
+.blog-img{
+     width:100%;
+    height:240px;
+     position:relative;   /*cuz of the position relative to the parent , it will have a fit the  position of the  box */
+       overflow:hidden; 
+
+
+}
+
+.blog-card:hover img{
+transform:scale(1.1);  /* it will scale the img only. Meaning any where inside the green, which is the inst-card hover will have made an effect onthe img. but if we give the hover effect to the 
+.blog-card:hover .blog-img ...then the whole img will comes  out of the box and looks bad*/
+}
+
+.blog-date{
+ 
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: white;
+
+}
+
+
+.blog-title1{
+
+    width:100%; 
+  
+    /* background-color:pink; */
+    overflow:hidden;
+    font-family: 'comfortaa','sans-serif';
+    font-size: 18px;
+    /* margin-top: 30px; */
+    line-height: 1.36364;
+ 
+    /* position: relative; */
+    cursor: pointer;
+    transition: .25s;
+    font-weight: 700;
+    padding-left: 20px;
+    padding-right: 20px;
+  
+    
+
+}
+
+.blog-card:hover .blog-title1{
+ color:#0473ab;
+} 
+
+
+.blog-description{
+   
+     font-size: 14.5px;
+    font-family: 'poppins','sans-serif';
+    
+    margin-top: 18px;
+    color: #777777;
+    position: relative;
+    letter-spacing: .05em;
+    font-weight: 400;
+    line-height: 1.74;
+    padding-left: 20px;
+    padding-right: 20px;
+
+
+}
+
+/* Footer Css */
+
+.footer{
+
+    width:100%;
+    padding-top:110px;
+    padding-bottom:100px;
+    background-color:rgb(42,51,63);
+   justify-content:center; 
+    display:flex;
+
+}
+
+.footer-container{
+    justify-content:space-between;
+    display:flex;
+   
+    
+   
+}
+
+.footer-gallery{
+    /* width:25.5%; */  /*sir use this one */
+    width:31.5%;
+ 
+    /* background-color:orange; */
+    display:flex;
+    flex-direction:column;
+    align-items:center; 
+    
+}
+
+.footer-title{
+    font-size:22px;
+    font-family:"comfortaa","sans-serif";
+   font-weight:700;
+   color:white;
+
+}
+
+.footer-img{
+     width:100%; 
+    height:auto;                 
+    margin-top:30px;
+    /* background-color:red;  */
+     display:flex;
+    justify-content:space-between; 
+    flex-wrap:wrap;  /* this help us to wrap the images on the boxes */
+     
+    
+}
+
+.ft-img{
+    height:93px;
+    width:93px;
+    background-color:blue;
+    overflow:hidden;
+     cursor:pointer;
+     position:relative;  /*since it is a parent */
+}
+
+.fimages{
+    position:absolute; /*sicne it is a child . so that it will poisiton accordig to its parent*/
+    width:100%;
+    height:100%;
+    transform:scale(1.1);
+    transition:0.4s;
+}
+.design{
+    width:200px;
+    height:100px;
+    background-color:rgba(255,255,255,0.5);
+    transform:rotateZ(45deg) translateX(-30px)  translateY(-130px); /*the y translate negative will go up/outside */
+    transition:0.45s;
+    position:absolute; /*sicne it is a child . so that it will poisiton accordig to its parent*/
+   
+}
+
+.ft-img:hover .design{
+    transform:rotateZ(45deg) translateX(-30px) translateY(160px); /*the y translate postive will go down */
+}
+
+
+.ft-img:hover .fimages{
+    transform:scale(1);
+
+}
+
+ /*Quick links css*/
+
+ /* footer-title for the quick links */
+.footer-title{
+    font-size:22px;
+    font-family:"comfortaa","sans-serif";
+   font-weight:700;
+   color:white;
+
+}
+
+ 
+ .quick-links{
+    width:32%;
+    /* background-color:orange; */
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+ 
+    
+ }
+
+
+ .links{
+     width:100%;
+     margin-top:30px;
+     /* background-color:brown; */
+     display:flex;
+     justify-content:space-between;
+ }
+
+ .links-child{
+     width:40%;
+     /* background-color:gray; */
+     color:white;
+     font-family: 'Lato', sans-serif;
+     font-weight:400;
+     font-size:15px;  /*Sir use 15px */
+    cursor:pointer;
+
+     
+ }
+
+
+.links-child>ul>li{
+    list-style-type: none;
+    margin-bottom:15px;
+    display:flex;
+    align-items:center;
+    transition:0.4s;
+    cursor:pointer;
+
+    
+}
+
+.link-line{
+    width:17px;
+    height:2px;
+    background-color:rgba(255,255,255,0.2);
+    display:inline-block;
+    margin-right:15px; /*to have a space b/n the line and the text */
+    transition:0.4s;
+}
+
+.links-child>ul>li:hover .link-line{
+    width:34px;
+}
+.links-child>ul>li:hover{
+    color:#0473ab;
+    
+}
+
+/* Get in touch CSS */
+
+.get-in-touch{
+    width:25%;
+     height:200px;
+    /*background-color:aqua; */
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.contact{
+    margin-top:30px;
+    width:100%;
+   /* height:50px;
+    background-color:gray; */
+}
+
+.contact-child{
+     font-family: 'Lato', sans-serif;
+     color:white;
+     display:flex;
+     width:100%;
+     margin-bottom:20px;
+     
+
+}
+
+.contact-icon{
+   
+    width:35px;
+    color:#f8ea49;
+    font-size:18px;
+}
+
+.contact-detail{
+    line-height:24px;
+    letter-spacing:0.75px;
+    cursor:pointer;
+    transition:0.4s;
+  
+}
+
+.soical-media-icon{
+    width:95%;
+    display:flex;
+    color:rgba(255,255,255,0.5);
+    font-size:18px; 
+    justify-content:space-between;  
+    margin-top:30px;
+   
+}
+
+.soical-media-icon>p{
+    width:41px;
+    height:41px;
+    line-height:40px;
+    text-align:center;
+    border:1px solid  rgba(255,255,255,0.5); 
+    border-radius:50%;
+     transition:0.4s;
+    cursor:pointer; 
+
+}
+
+
+.contact-detail:hover{
+    color:#0473ab;
+}
+.soical-media-icon>p:hover{
+    color:#0473ab;
+    border:1px solid #0473ab;
+}
+
+/* Copy right Css */
+
+.copyright{
+    width:100%;
+    height:100px;
+    border:1px solid rgba(225,225,224,0.2);
+     background-color:rgb(42,51,63);  /*the same as footer section */
+
+     /* for the copy right property , I use and add this 2 property and commment out the justify-content. cuz column will go with align items but not with jusfity content*/
+     flex-direction:column;
+     align-items:center; 
+      font-size:15px;
+      font-weight:400;
+      color:#777777;
+      text-align:center;
+      font-family:'poppins','sans-serif';
+      line-height:100px;
+      box-sizing:border-box;  /*this will give us the equal size from the top and bottom of the box */
+}
+
+
+
+

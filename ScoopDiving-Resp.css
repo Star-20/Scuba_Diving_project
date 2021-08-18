@@ -1,0 +1,829 @@
+/* This property will be apply to the responsivness for Mobile app with screen size <=560
+lessthan or equal to 560px */
+
+@media (max-width:560px){
+
+    /* Global Css */
+    .container{
+    width:90%; /*for my mobile screen the container should be 90% width*/
+    display:flex;
+}
+
+.title{
+    font-family:"comfortaa","sans-serif";
+    font-size:30px;
+    font-weight:700;  /*font wegiht didnt take a px or % */
+    text-align:center;
+    
+
+}
+
+
+
+
+
+
+/* --- */
+
+
+
+    /* 1st:CSS for Banner section */
+
+    .banner{
+        height:400px;
+        align-items:flex-start;  /*cuz since we give align-items=center to the desktop(scoopdiving.css)screen, on mobile screen we willget a line on the top of the banner. to remove that we should use the align-items:flex-start at the  mobile screen */
+}
+
+/* To hide things
+/we should hide it those listed above from the mobile screen size , so display=none */
+
+/* 
+1. no prev and next button, no call us info, no the list of the naviagtion,  */
+
+/* 2. for <br> we separet them with class="mob" ..for mobile, and class="desktop" ..for destop .as we will get issue when we deal to do the responsivenss.we can use this tricks to play with different 
+screen style.what ever having a class "desktop"...will be hidden for the mobile phones.
+
+if we hide the br "desktop"  class from mobil 560px screen the header will come on the same line */
+
+
+.prev-button,.next-button,.header-child:nth-child(1),.nav,.nav-parent,.desktop{
+    display:none;  
+}
+
+/* mobile navigation */
+.mob-nav{
+    width:65%;
+    height:100vh;
+    background-color:white;
+    position:fixed;
+    z-index:100;
+    margin-top:60px;
+    font-family: 'Poppins', sans-serif; 
+   font-weight:600;
+   font-size:14px;
+   letter-spacing:1px;
+   margin-left:-65%;  /*means i will hide it and to do that I must give the same % as its width *//*means i will hide it and to do that I must give the same % as its width */
+   transition:0.4s;
+  
+ 
+}
+
+
+.mob-nav>ul>li{
+    padding:11px;
+    cursor:pointer;
+}
+.mob-nav>ul>li:first-child{
+    color:#ffffff;
+    background-color:#0473ab;
+
+}
+
+
+/* step2.to make the header on the top and fixed */
+.header{
+    position:fixed;
+    z-index:120;  /*this will be on the top of the .mob-nav */
+}
+
+
+
+
+.banner-content{
+    width:100%;  /*so that the search and en  becomes at the end */
+    
+    
+}
+.header{
+    background-color:white; /*the one that holds the logo and serach,en part */
+    align-items:center;
+}
+
+.banner-text>h1{
+    font-size:32px;
+    line-height:40px;
+    text-align:center;
+    margin-top:100px;
+    
+
+}
+
+
+.banner-text>p{
+    font-size:14px;
+    text-align:center;
+}
+
+
+.mob{
+    display:inline-block !important ;   
+  
+}
+
+
+.banner-text{
+    margin-top:100px;  
+}
+
+.btn{
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-right:17px;
+    padding-left:17px;
+    border-radius:6px;
+    border:2px solid #f8ea49;
+    font-size:14px;
+   font-family: 'Lato', sans-serif;
+    font-weight:700;
+    background-color: #f8ea49;
+    letter-spacing:.1em;
+    margin-top:25px;
+}
+
+.en{
+    
+    background-color:#0473ab; 
+    color:white;
+}
+
+
+.header-child{
+   
+     color:black;   
+    width:35%; /*add from sir */
+   
+    
+}
+
+/* step1 for the js of the 3 dots */
+.mob-child{
+
+    background-color:white;
+    width:60%;
+    margin-left:40%;
+    position:fixed;
+    height:8vh;
+    z-index:100;
+   
+    font-family: 'Lato', sans-serif;
+    margin-top:60px;
+    text-align:center;
+    padding-top:10px;
+    
+     cursor:pointer;
+     /* overflow:hidden; */
+     transition:max-height 0.2s;
+     margin-left:-70%; 
+      /*means i will hide it and to do that I must give the*/
+    
+
+}
+.menu-dots{
+     margin-right:38px;
+     /*add this margin right in order to be shown the 3 menu-dots in mobile screen*/
+}
+
+.callus{
+    font-weight:bold;
+    font-size:17px;
+    
+     
+}
+
+.mob-child>p{
+    color:#777777;
+    font-size:15px;
+    padding-right:20px;
+
+}
+
+.header-child:nth-child(2){
+
+    align-items:flex-start;
+}
+.head-dot{
+    width:6px;
+    height:6px;
+ background-color:black; 
+   border-radius:50%;
+   /* position:absolute; */
+
+}
+
+.menu-dots,.menu-lines{
+    display:flex !important;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-around;
+    padding-left:15px;
+    padding-right:15px;
+    height:27px;
+    /* background-color:lightgray; */
+    cursor:pointer;
+
+    
+}
+
+.menu-lines{
+        margin-top:-10px;  /*to work with the javascript step 5 */
+}
+
+.btt{
+    margin-left:85%;
+}
+
+
+
+.logo{
+    width:100px;  /*i change to 100px from 100% */
+}
+
+.head-line{
+    width:25px;
+    height:2px;
+    background-color:black;
+
+     /* it apply to all lines to make it not to go quickly and make it animated and smooth*/
+transition:0.3s;
+
+         
+}
+
+/* CSS for destination */
+.destination{
+    padding-top:30px;
+    padding-bottom:30px;
+
+}
+.dest-card{
+    width:100%;  /*I must make the width full,which means it will be =90%, as the global widht of the mobile screen*/
+    /* background-color:red; */
+    margin-bottom: 50px;  /*this will help us to have a gap among them and to avoid the overlap of the container */
+}
+
+/* to remove the hover effect and the scaling transform */
+.dest-card:hover .dest-img>img{
+
+ transform:scaleX(1) scaleY(1);  /*since we dont need hover effect and scaling for the img in the mobile screen, i will give the defualt scale size that is 1. */
+}
+
+.dest-card:hover .dest-extra{
+transform:scale(1);  /*since we dont need hover effect and  scaling for the img in the mobile screen,
+ i will give the defualt scale size that is 1. */
+
+ box-shadow:none;  /*no need for the shadow */
+
+}
+
+.dest-card:hover .dest-img{
+ border:1px  solid #e1e1e1;
+}
+
+.dest-img{
+  
+   /* height:310px;  /*to hold the big img size propertly*/
+    width:100%; 
+   
+}
+
+.dest-img>img{
+    width:95%;  /*cuz the img is bigger */
+    
+}
+
+.destination-container{
+    justify-content:center;
+}
+
+
+/*CSS for  Equipment  */
+
+.equipments{
+    
+     flex-direction:column;  /*to arrang them vertically */
+     align-items:center;
+     background-position:left;   /*to hide the background image from the screen */
+     /* I must reduce the padding of top and bottom from 120px to 30px, in order to avoid too much space gap among the box and the first img */
+     padding-top:30px;
+     padding-bottom:30px;
+    
+  
+}
+
+.equipment1{
+    width:90%;
+    height:auto; /*since i gave hight to this one on the desktop sizse. by given auto height,
+    it will grow */
+}
+
+.eq{
+    width:100%;
+    margin-bottom:30px;  /*this help us to have equal gap among the content */
+    height:auto;
+   
+    
+}
+
+.eq-child{
+    flex-direction:column;
+    width:100%;
+    align-items:center;
+ 
+    
+}
+
+.equipment1:nth-child(1)>.eq:nth-child(1)>.eq-child{
+   flex-direction:column-reverse; /*if i use column, the img will be going down, to avoid it that we will use column-reverse */
+}
+
+.equipment1:nth-child(1)>.eq:nth-child(2)>.eq-child{
+   flex-direction:column-reverse;
+}
+
+.right,.left{
+    text-align:center;
+}
+
+.left{
+    margin-right:50px;  /*to make the heading and sentence start from beigning line */
+}
+
+/* to make the 2 right side images to the center */
+.img1{
+      margin-right:50px; /*to make the img align with the other img2 */
+      margin-left:0;
+}
+
+.equipment1 .brd{
+    border:none;   /*the line among each 4 img in the desktop will be remvoed from mobile */
+}
+.eq-img{
+
+    display:flex;
+    justify-content:center;
+    margin-bottom:20px; /*to have a gap between the text and the img */
+ 
+}
+
+.eq-img>img{
+    width:60px;  /*decrease the size of the 4 images */
+}
+.eq-detail{
+    align-items:center;
+    display:flex;
+    flex-direction:column;
+    width:100%;
+   
+
+
+}
+
+.eq-desc{
+    font-size:13px;
+    margin-top:8px;
+    margin-left:50px;  /* 11111 */
+}
+
+.eq-title{
+    font-size:20px;
+}
+
+/* Counter CSS */
+
+
+.counter{
+    /* I must reduce the padding of top and bottom from 80px to 40px, in order to avoid too much space gap among the box and the first number box */
+    padding-top:40px;
+    padding-bottom:40px;
+    background-position:center;  /*to see the fish img*/
+    
+}
+.counter-container{
+    flex-wrap:wrap;  /* as my child have 50% width , and we can wrap them to get them on the same equal width .2 will go down*/
+}
+
+.counter-child{
+    width:50%;
+    height:130px; /*to avoid too much height , which is at desktop have a height=250px;*/
+}
+   
+.counter-number{
+  font-size:26px;
+
+}
+
+.counter-text{
+font-size:14px;
+
+}
+
+.counter-line{
+    margin-top:10px; /*for the Gap among them */
+    margin-bottom:10px;
+    width:15%;
+    height:1.1px;
+}
+
+/* Why choose css */
+.why{
+    padding-top:40px;
+    padding-bottom:40px;
+}
+.why-container{
+  align-items:center;
+}
+
+.why-row-1{
+    flex-direction:column;  /*to make them one below the other, which they orgianly have display:flex;*/
+     align-items:center;
+  
+}
+
+.why-banner{
+    height:400px;
+    width:100%;
+
+}
+
+.why-detail{
+    width:100%;
+}
+
+.why-detail>.title{
+    text-align:center;
+    font-size:22px;
+}
+
+.info-ele{
+   height:60px;
+} 
+
+.circle-btn{
+height:30px;
+width:30px;
+font-size:30px;
+line-height:18px;
+ 
+
+}
+
+.info-text{
+font-size:14px;
+}
+
+.why-indicators{
+    margin-top:80px;
+    margin-bottom:30px;
+
+}
+
+.why-row-2{
+    flex-direction:column;
+    align-items:center;
+}
+
+.why-reason{
+      width:100%;
+      margin-bottom:20px;
+}
+
+.reason-title{
+font-size:20px;
+}
+
+
+/* Testimonial CSS */
+
+.testimonial-slider{
+    width:100%;
+}
+.slider-text{
+    font-size:20px;
+}
+
+.slider-text .user{
+    margin-top:40px;
+    width:100%;
+    display:flex !important;
+
+}
+
+/* Gallaery css */
+.gallery{
+    padding-top:40px;
+    padding-bottom:40px;
+}
+
+.gallery-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+}
+/* when at desktop have grid display; it have height and width. But for the flex, it didnt have it.so we need to give them in px.
+%--depends on parent, in PX ---depends on the child */
+.gimg{
+    height:auto;
+    width:270px;
+    flex-direction:column;
+   
+
+}
+.gallery-image{
+    position:static;  /*so the img will not going to overlap to each others */
+
+}
+/* the gimage height will depend onthe child img height */
+.gallery-image>img{
+    height:auto;
+    width:100%;  /*=270px as gimg width */
+    
+}
+
+/* we need to remove the hover effect to see the text and search icon on mobile below the img since we can do throug touch but not through mouse */
+.goverlay{
+    position:static;  /*I want the over-title and the zoom-icon to be below the img, so I should remvoe the position absoulte and give on mobile the static */
+    width:100%;
+    height:100%; /*i must use the same height as the desktop height to make sure it stay below the img */
+    display:none;  /*we don't need to see it */
+}
+
+.over-details{
+    position:static;
+    background-color:#f9faf9;
+}
+
+/* lets make it visible for the text which only seen at hover effect */
+.over-title{
+    color:rgba(0,0,0,1);
+    font-size:16px;
+
+}
+
+.gimg:hover .over-title{
+      color:rgba(0,0,0,1);
+}
+
+.over-content{
+    height:130px;  
+    align-items:center;
+    justify-content:center;
+
+}
+/* to remove the hover effect for the text and search icon */
+.gimg:hover .over-content{
+    height:130px;  /*once we hover it, the text goes down */ 
+
+}
+
+.zoom-icon{
+     background-color:rgba(4,115,219,1);  /*the last one is 1, means it is visible */
+      color:rgba(255,255,255,1);
+      margin-left:0px;  /*which means it will not move. no movement */
+      margin-top:20px;
+}
+
+.gimg:hover .zoom-icon{
+    margin-left:0px;
+    margin-top:20px;
+}
+
+
+/* Newsletter CSS */
+ .newsletter{
+    padding-top:120px;
+    padding-bottom:120px;
+    padding-right:25px;
+    padding-left:25px;
+    background-position:center;
+        flex-direction:column;
+
+} 
+
+.newsletter-container{
+ 
+    flex-direction:column;
+    align-items:center;
+    height:250px;
+}
+
+.newsletter-card{
+    width:100%;
+    text-align:center;
+ 
+}
+
+.newsletter-title{
+     font-size:22px;
+
+}
+
+.newsletter-text{
+    margin-top:10px;
+    font-size:13px;
+    opacity:0.7;
+
+}
+
+
+.newsletter-email{
+    margin-top:30px;
+      border-bottom:1px solid #ffffff; 
+      outline:none;
+      font-size:15px;  
+
+}
+
+
+
+.newsletter-btn{
+    width:100%;
+     text-align:center;
+     /* outline:none; */
+
+}
+/* to give property to the placeholder only .
+The ::placeholder CSS pseudo-element represents the placeholder text in an <input> or <textarea> element.*/
+::placeholder {
+  color:#ffffff;
+  font-size: 14px;
+}
+
+/* Instructor Css */
+.instructors{
+      padding-top:50px;
+      padding-bottom:50px;
+}
+
+.instructors-container{
+    flex-direction:column;
+    align-items:center;
+
+}
+
+.instructors>.title{
+    width:100%; 
+    padding-top:10px;
+
+    
+
+}
+.inst-card{
+    flex-direction:column ;
+    align-items:center;
+    width:100%;
+   margin-bottom:40px;  /*to have a smaller gap among the 4 inst child box */
+   margin-left:10px;
+   
+}
+
+/* to remove the hover effect to scale big the img */
+.inst-card:hover img{
+transform:scale(1);  /* it will not scale the img since the defual one is 1*/
+
+}
+
+.inst-img{
+  height:auto;
+    width:270px;
+    flex-direction:column;
+   align-items:center;
+   
+}
+.inst-title{
+  
+   font-size:15px;
+   margin-top:18px;
+
+}
+
+.inst-description{
+     font-size:13px;
+     /* opacity:0.8; */
+    margin-top:18px;
+  
+}
+
+.inst-socialmedia{
+    width:25%;
+    /* display:flex;
+    color:black; */
+    align-items:center;
+    display:flex;
+    margin-top:18px;
+    /* background-color:pink;      */
+
+     
+}
+
+
+/* Our Blog Css */
+.blog{
+    padding-top:10px;
+    padding-top:10px;
+    
+}
+.blog-container{
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+}
+
+
+.blog-img{
+    height:auto;  /*so the blog-img sizse depends onthe size of img */
+}
+.blog-card{
+    
+    width:100%;
+    margin-bottom:40px;  
+  
+}
+
+.blog img{
+    width:100%;
+}
+.blog-card:hover .blog-img{
+transform:scale(1);  
+
+}
+
+.blog-extra{
+        margin-top: 0px;
+        margin-bottom: 0px; 
+        height:auto;  
+}
+
+.blog-date{
+    font-size:16px;
+      opacity:0.7;
+       font-weight:0;
+}
+.blog-title1{
+    font-size:19px;
+}
+
+.blog-description{
+    font-size:16px;
+    margin-top:20px;
+    line-height: 1.36364;
+    
+}
+
+
+/* Footer Css */
+
+
+.footer-container{
+    flex-direction: column;
+    align-items:center;
+  
+}
+
+.footer-title{
+    text-align:center;
+}
+.footer-container>div{
+    width:100%;
+    margin-bottom:40px;
+}
+  .ft-img{
+    width:130px;
+    height:130px;
+    margin-bottom:10px; 
+}  
+/* the img are too small so we ne3ed to increase the size of the fimage */
+.fimage>img{
+    width:100%;
+
+}
+
+img{
+    width:100%;  /*this help me to make the img fully fill the boxxes */
+}
+.footer-img{
+     width:85%;
+}
+.footer{
+    padding-top:50px;
+    padding-bottom:50px;
+}
+
+/* to stop the line growth during the hover effect  */
+.links-child>ul>li:hover .link-line{
+    width:17px;  /*during hover to this line, it will remain the same since I give the same width as its orgianl one and no change during the hover effect */
+}
+
+.soical-media-icon{
+    
+    justify-content:space-evenly;
+    padding:0;
+    
+
+
+   
+}
+}
+
+
